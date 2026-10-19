@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phúc Long Tea Lab</title>
+  <meta name="description" content="Prototype đề án: menu Phúc Long, Mood Mix, Tea Lab, bạn bè & chuỗi check-in, cửa hàng độc bản theo địa điểm.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..700;1,5..1200,300..700&family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=187">
+</head>
+<body>
+  <header class="topbar">
+    <a href="#home" class="brand" aria-label="Trang chủ">
+      <img class="brand-logo" src="logo-phuc-long.png" alt="Phúc Long – since 1968" width="212" height="142">
+      <span class="brand-tag">Tea Lab</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#home" data-nav="home"><span>🏠</span><small>Trang chủ</small></a>
+      <a href="#menu" data-nav="menu"><span>🧋</span><small>Menu</small></a>
+      <a href="#mood" data-nav="mood" class="nav-extra"><span>🎧</span><small>Mood</small></a>
+      <a href="#tealab" data-nav="tealab" class="nav-extra"><span>🧪</span><small>Tea Lab</small></a>
+      <a href="#friends" data-nav="friends"><span>📸</span><small>Bạn bè</small></a>
+      <a href="#community" data-nav="community" class="nav-extra"><span>💬</span><small>Cộng đồng</small></a>
+      <a href="#hubs" data-nav="hubs"><span>🏪</span><small>Cửa hàng</small></a>
+      <a href="#profile" data-nav="profile" class="nav-me"><span id="navAvatar">👤</span><small>Tôi</small></a>
+    </nav>
+  </header>
+
+  <main id="app" class="app" tabindex="-1"></main>
+
+  <footer class="site-foot">
+    <div class="foot-inner">
+      <div class="foot-top">
+        <h2 class="foot-title">Chuyện trà<br><em>cùng</em> Phúc Long</h2>
+        <nav class="foot-links"><a href="#home">Trang chủ</a> / <a href="#menu">Menu</a> / <a href="#mood">Mood Mix</a> / <a href="#tealab">Tea Lab</a> / <a href="#friends">Bạn bè</a> / <a href="#hubs">Cửa hàng</a></nav>
+      </div>
+      <div class="foot-cards">
+        <a class="foot-card" href="#community"><span class="fc-ic">💬</span><span><b>Cộng đồng Tea Lab</b><small>Chia sẻ công thức & review</small></span></a>
+        <a class="foot-card" href="#friends"><span class="fc-ic">📸</span><span><b>Chuỗi Phúc Long</b><small>Chụp ảnh mỗi ngày, đổi voucher</small></span></a>
+      </div>
+      <ul class="foot-stores">
+        <li>Phúc Long Phố Cổ |Đèn lồng|: Hội An – Destination Hub</li>
+        <li>Phúc Long Đồi Thông |Sương|: Đà Lạt – Destination Hub</li>
+        <li>Phúc Long Hàng Gai |Hoa giấy|: Phố cổ Hà Nội – Destination Hub</li>
+        <li>Phúc Long Urban Hub |Focus & Chill|: Làng Đại học, TP.HCM</li>
+      </ul>
+      <p class="foot-note">Prototype phục vụ đề án học tập “Viết Câu Chuyện Trà Độc Bản” – không phải sản phẩm hay kênh liên hệ chính thức của Phúc Long. </p>
+    </div>
+  </footer>
+
+  <!-- bộ lọc xoá nền trắng của ảnh sản phẩm (vùng gần trắng → trong suốt) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="knockWhite" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  -9 -9 -9 26.6 0"/></filter></svg>
+  <div id="modal" class="modal" hidden></div>
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+
+  <script src="data.js?v=187"></script>
+  <script src="store.js?v=187"></script>
+  <script src="avatar.js?v=187"></script>
+  <script src="cups.js?v=187"></script>
+  <script src="scenes.js?v=187"></script>
+  <script src="app.js?v=187"></script>
+  <script src="pages.js?v=187"></script>
+  <script src="dressup.js?v=187"></script>
+</body>
+</html>
